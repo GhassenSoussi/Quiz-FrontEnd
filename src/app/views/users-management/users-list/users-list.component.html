@@ -1,0 +1,41 @@
+<mdb-card>
+  <mdb-card-body>
+    <div class="row">
+      <div class="col-lg-6">
+        Gestion des utilisateurs
+      </div>
+      <div class="col-lg-6">
+        <button type="button" mdbBtn color="primary" mdbWavesEffect style="float: right" size="sm" (click)="addUser()"><i
+            class="fas fa-user-plus"></i></button>
+      </div>
+    </div>
+  </mdb-card-body>
+</mdb-card>
+<br>
+<mdb-card>
+  <mdb-card-body>
+    <table mdbTable responsiveMd>
+      <thead>
+        <tr>
+          <th scope="col">Prénom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">email </th>
+          <th scope="col">role </th>
+          <th scope="col">Action </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr mdbTableCol *ngFor="let user of users">
+          <th scope="row">{{user.firstName}}</th>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.role.title}}</td>
+          <td>
+            <button type="button" mdbBtn color="info" size="sm" mdbWavesEffect (click)="updateUser(user.id)">Modifier</button>
+            <button type="button" mdbBtn color="danger" size="sm" mdbWavesEffect (click)="deleteUser(user.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mdb-card-body>
+</mdb-card>
