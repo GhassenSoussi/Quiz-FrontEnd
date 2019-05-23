@@ -1,0 +1,39 @@
+<mdb-card>
+  <mdb-card-body>
+    <div class="row">
+      <div class="col-lg-6">
+        Gestion des QCM 
+      </div>
+      <div class="col-lg-6">
+        <button type="button" mdbBtn color="primary" mdbWavesEffect style="float: right" size="sm" (click)="addUser()"><i
+            class="fas fa-user-plus"></i></button>
+      </div>
+    </div>
+  </mdb-card-body>
+</mdb-card>
+<br>
+<mdb-card>
+  <mdb-card-body>
+    <table mdbTable responsiveMd>
+      <thead>
+        <tr>
+          <th scope="col">Titre</th>
+          <th scope="col">Description</th>
+          <th scope="col">Créateur</th>
+          <th scope="col">Action </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr mdbTableCol *ngFor="let quiz of quizzes">
+          <th scope="row">{{quiz.title}}</th>
+          <td>{{quiz.description}}</td>
+          <td>{{quiz.user.firstName}}</td>
+          <td>
+            <button type="button" mdbBtn color="info" size="sm" mdbWavesEffect (click)="updateUser(quiz.id)">Modifier</button>
+            <button type="button" mdbBtn color="danger" size="sm" mdbWavesEffect (click)="deleteUser(quiz.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mdb-card-body>
+</mdb-card>

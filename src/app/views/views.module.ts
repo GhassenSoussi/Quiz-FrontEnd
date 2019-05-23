@@ -16,6 +16,9 @@ import { Dashboard1Component } from './dashboards/dashboard1/dashboard1.componen
 import { UsersListComponent } from './users-management/users-list/users-list.component';
 import { UserAddComponent } from './users-management/user-add/user-add.component';
 import { UserUpdateComponent } from './users-management/user-update/user-update.component';
+import { QuizListComponent } from './quizzes-management/quiz-list/quiz-list.component';
+import { QuizAddComponent } from './quizzes-management/quiz-add/quiz-add.component';
+import { QuizUpdateComponent } from './quizzes-management/quiz-update/quiz-update.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { UserUpdateComponent } from './users-management/user-update/user-update.
     Dashboard1Component,
     UsersListComponent,
     UserAddComponent,
-    UserUpdateComponent
+    UserUpdateComponent,
+    QuizListComponent,
+    QuizAddComponent,
+    QuizUpdateComponent
   ],
   exports: [
     FooterComponent,
